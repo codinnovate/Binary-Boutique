@@ -5,69 +5,39 @@ btn && nav && (btn.onclick = () => nav.classList.toggle('open'));
 
 const trustees = [
     {
-        name: 'Favour Ezinne John',
-        email: 'ajala.abdullah@miva.edu.ng',
-        image: './assets/images/trustee/14.png'
+        name: 'Alade Ademola Aderohunmu',
+        email: 'alade.aderohunmu@miva.edu.ng',
+        image: './assets/images/trustee/adrohunmu-alade.jpeg'
     },
     {
-        name: 'Favour Ezinne John',
-        email: 'Favour.john@miva.edu.ng',
-        image: './assets/images/trustee/12.png'
+        name: 'Opeyemi Ibrahim Okekunle',
+        email: 'opeyemi.ibrahim@miva.edu.ng',
+        image: './assets/images/trustee/opeyemi-ibrahim.jpeg'
     },
     {
-        name: 'Joseph Adeyemi',
-        email: 'joseph.adeyemi@miva.edu.ng',
-        image: './assets/images/trustee/11.png'
+        name: 'Samad Sapara',
+        email: 'samad.sapara@miva.edu.ng',
+        image: './assets/images/trustee/placeholder.png'
     },
     {
-        name: 'Omotosho Temitope',
-        email: 'omotosho.temitope@miva.edu.ng',
-        image: './assets/images/trustee/1.jpg'
+        name: 'Aiyenimelo Tofunmi',
+        email: 'aiyenimelo.tofunmi@miva.edu.ng',
+        image: './assets/images/trustee/placeholder.png'
     },
     {
-        name: 'Lebura Prince',
-        email: 'lebura.prince@miva.edu.ng',
-        image: './assets/images/trustee/4.jpg'
+        name: 'Jonah Elisha',
+        email: 'jonah.elisha@miva.edu.ng',
+        image: './assets/images/trustee/placeholder.png'
     },
     {
-        name: 'Hamza Yunusa',
-        email: 'hamza.yunusa@miva.edu.ng',
-        image: './assets/images/trustee/2.jpg'
+        name: 'Progress Ochuko Eyaadah',
+        email: 'progress.eyaadah@miva.edu.ng',
+        image: './assets/images/trustee/placeholder.png'
     },
     {
-        name: 'Solademi oyewole lateef',
-        email: 'solademi.oyewole@miva.edu.ng',
-        image: './assets/images/trustee/3.jpg'
-    },
-    {
-        name: 'Samuel Bulus',
-        email: 'Samuel.Bulus@miva.edu.ng',
-        image: './assets/images/trustee/5.jpg'
-    },
-    {
-        name: 'Sandra Adah',
-        email: 'sandra.adah@miva.edu.ng',
-        image: './assets/images/trustee/6.jpg'
-    },
-    {
-        name: 'Ejiro Nigeria irhobo',
-        email: 'ejiro.irhobo@miva.edu.ng',
-        image: './assets/images/trustee/7.jpg'
-    },
-    {
-        name: 'Mifuenayo Erimakonosine',
-        email: 'mifuenayo.erimakonosine@miva.edu.ng',
-        image: './assets/images/trustee/8.jpg'
-    },
-    {
-        name: 'Musa Emmanuel onimisi',
-        email: 'musa.emmanuel@miva.edu.ng',
-        image: './assets/images/trustee/9.jpg'
-    },
-    {
-        name: 'Josiah Alphonsus',
-        email: 'Josiah.Alphonsus@miva.edu.ng',
-        image: './assets/images/trustee/10.jpg'
+        name: 'Morenike Oyewole',
+        email: 'morenike.oyewole@miva.edu.ng',
+        image: './assets/images/trustee/Morenike-Oyewole.jpg'
     },
     {
         name: 'Samuel Adeyemi',
@@ -75,9 +45,39 @@ const trustees = [
         image: './assets/images/trustee/13.png'
     },
     {
-        name: 'Morenike Oyewole',
-        email: 'morenike.oyewole@miva.edu.ng',
-        image: './assets/images/trustee/Morenike-Oyewole.jpg'
+        name: 'Blessing Nabasu Badari',
+        email: 'blessing.badari@miva.edu.ng',
+        image: './assets/images/trustee/placeholder.png'
+    },
+    {
+        name: 'Abdulrahman Usman',
+        email: 'usman.abdulrahman@miva.edu.ng',
+        image: './assets/images/trustee/Abdulrahman-Usman .jpeg'
+    },
+    {
+        name: 'Oluwaseun Donna',
+        email: 'oluwaseun.donna@miva.edu.ng',
+        image: './assets/images/trustee/placeholder.png'
+    },
+    {
+        name: 'Ajala Abdullah',
+        email: 'ajala.abdullah@miva.edu.ng',
+        image: './assets/images/trustee/14.png'
+    },
+    {
+        name: 'Boluwatife Ajayi',
+        email: 'boluwatife.ajayi@miva.edu.ng',
+        image: './assets/images/trustee/Ajayi-Boluwatife.jpeg'
+    },
+    {
+        name: 'Micheal Princewill',
+        email: 'micheal.princewill@miva.edu.ng',
+        image: './assets/images/trustee/placeholder.png'
+    },
+    {
+        name: 'Samuel Unachukwu',
+        email: 'samuel.unachukwu@miva.edu.ng',
+        image: './assets/images/trustee/unachukwu-samuel.jpeg'
     }
 ];
 
