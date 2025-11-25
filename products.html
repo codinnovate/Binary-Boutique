@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - BINARY BOUTIQUE</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <marquee>
+        🛍️ Free shipping on orders over $100! Shop now and save!
+      </marquee>
+
+      <header>
+        <button class="menu-btn">
+          <img src="./assets/images/icons/menu.svg" alt="Bars" />
+        </button>
+        <h1 class="logo">BINARY BOUTIQUE</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="board-trustees.html">Board of Trustees</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <button>
+            <img src="./assets/images/icons/search.svg" alt="Search" />
+          </button>
+          <button>
+            <img src="./assets/images/icons/cart.svg" alt="Cart" />
+          </button>
+          <button>
+            <img src="./assets/images/icons/account.svg" alt="User" />
+          </button>
+        </div>
+      </header>
+
+      <section class="page">
+        <div class="container">
+          <h2>All Products</h2>
+
+          <div class="products-controls">
+            <div class="search-bar">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+                aria-label="Search products"
+              />
+            </div>
+
+            <div class="filters">
+              <div class="filter-group">
+                <label for="categoryFilter">Category:</label>
+                <select id="categoryFilter">
+                  <option value="all">All Categories</option>
+                  <option value="T-Shirts">T-Shirts</option>
+                  <option value="Shirts">Shirts</option>
+                  <option value="Jeans">Jeans</option>
+                  <option value="Shorts">Shorts</option>
+                  <option value="Polo">Polo</option>
+                  <option value="Jackets">Jackets</option>
+                  <option value="Hoodies">Hoodies</option>
+                  <option value="Pants">Pants</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="priceFilter">Price Range:</label>
+                <select id="priceFilter">
+                  <option value="all">All Prices</option>
+                  <option value="0-20">Under $20</option>
+                  <option value="20-40">$20 - $40</option>
+                  <option value="40-60">$40 - $60</option>
+                  <option value="60-100">$60 - $100</option>
+                </select>
+              </div>
+
+              <div class="filter-group">
+                <label for="sortFilter">Sort By:</label>
+                <select id="sortFilter">
+                  <option value="default">Default</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Highest Rated</option>
+                  <option value="name">Name: A-Z</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="products-results">
+            <p id="resultsCount"></p>
+          </div>
+
+          <div class="products" id="productsGrid"></div>
+
+          <div id="noResults" class="no-results" style="display: none">
+            <p>No products found matching your criteria.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>
+          <h1>BINARY BOUTIQUE</h1>
+          <p>
+            Curating timeless fashion for the modern individual. Discover pieces
+            that celebrate your unique style and confidence.
+          </p>
+        </div>
+        <div class="footer-links">
+          <ul>
+            <h3>Company</h3>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="board-trustees.html">Board of Trustees</a></li>
+          </ul>
+          <ul>
+            <h3>Help</h3>
+            <li><a href="about.html">Customer Support</a></li>
+            <li><a href="about.html">Shipping & Returns</a></li>
+            <li><a href="contact.html">Terms & Conditions</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+          </ul>
+        </div>
+        <div class="copyright">
+          <p>BINARY BOUTIQUE © 2000 - 2025, All Rights Reserved</p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="main.js"></script>
+    <script src="products.js"></script>
+  </body>
+</html>
