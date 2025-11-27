@@ -234,7 +234,7 @@ const trustees = [
     {
         name: 'Micheal Princewill',
         email: 'micheal.princewill@miva.edu.ng',
-        image: './assets/images/trustee/placeholder.png'
+        image: './assets/images/trustee/Michael_Princewill.jpeg'
     },
     {
         name: 'Samuel Unachukwu',
