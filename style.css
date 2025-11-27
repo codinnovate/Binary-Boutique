@@ -550,9 +550,34 @@ header {
 }
 
 .product-ratings .stars {
-  color: #ffd700;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
   font-size: 1rem;
-  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.product-ratings .star {
+  color: #ffd700;
+}
+
+.product-ratings .star.empty {
+  color: #d3d3d3;
+}
+
+.product-ratings .star.half {
+  position: relative;
+  color: #d3d3d3;
+}
+
+.product-ratings .star.half::after {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #ffd700;
 }
 
 .product-ratings p {

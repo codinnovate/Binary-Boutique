@@ -2,7 +2,6 @@ const btn = document.querySelector('.menu-btn');
 const nav = document.querySelector('nav');
 btn && nav && (btn.onclick = () => nav.classList.toggle('open'));
 
-
 const products = [
     {
         id: 1,
@@ -166,7 +165,6 @@ const products = [
     }
 ];
 
-
 const trustees = [
     {
         name: 'Alade Ademola Aderohunmu',
@@ -246,20 +244,108 @@ const trustees = [
 ];
 
 
+function generateStars(rating) {
+    const safeRating = Math.min(Math.max(rating, 0), 5);
+    const fullStars = Math.floor(safeRating);
+    const hasHalfStar = safeRating - fullStars >= 0.5;
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+    return [
+        ...Array(fullStars).fill('<span class="star full">★</span>'),
+        hasHalfStar ? '<span class="star half">★</span>' : '',
+        ...Array(emptyStars).fill('<span class="star empty">☆</span>')
+    ].join('');
+}
+
+function renderProductsGrid(list, target) {
+    if (!target) return;
+
+    target.innerHTML = list.map(p => `
+        <div class="single-product">
+            <div class="product-image">
+                <img
+                    src="${p.image}"
+                    alt="${p.name}"
+                    onerror="this.src='./assets/images/products/placeholder.png'"
+                />
+            </div>
+            <h3><a href="product-detail.html?id=${p.id}">${p.name}</a></h3>
+            <span class="product-ratings">
+                <span class="stars">${generateStars(p.rating)}</span>
+                <p>${p.rating}/5</p>
+            </span>
+            <h1>$${p.price.toFixed(2)}</h1>
+        </div>
+    `).join('');
+}
+
+const newArrivalsGrid = document.getElementById('newArrivals');
+const topSellingGrid = document.getElementById('topSelling');
+
+if (newArrivalsGrid || topSellingGrid) {
+    const newArrivals = products.filter(p => p.isNewArrival).slice(0, 4);
+    const topSelling = products.filter(p => p.isFeatured).slice(0, 4);
+
+    renderProductsGrid(newArrivals, newArrivalsGrid);
+    renderProductsGrid(topSelling, topSellingGrid);
+}
+
 const boardList = document.getElementById('board-list');
 
-boardList.innerHTML = trustees.map(trustee => `
-    <div class="board-card">
-      <img
-        src="${trustee.image}"
-        alt="${trustee.name}"
-        width="205"
-        height="208"
-      />
-      <h3>${trustee.name}</h3>
-      <p>
-        <a href="mailto:${trustee.email}">${trustee.email}</a>
-      </p>
-    </div>
-  `).join('');
+if (boardList) {
+    boardList.innerHTML = trustees.map(trustee => `
+        <div class="board-card">
+          <img
+            src="${trustee.image}"
+            alt="${trustee.name}"
+            width="205"
+            height="208"
+          />
+          <h3>${trustee.name}</h3>
+          <p>
+            <a href="mailto:${trustee.email}">${trustee.email}</a>
+          </p>
+        </div>
+      `).join('');
+}
 
+const isProductDetailPage = document.body.classList.contains('product-detail-page');
+
+if (isProductDetailPage) {
+    const params = new URLSearchParams(window.location.search);
+    const productId = Number(params.get('id'));
+
+    const productDetail = document.getElementById('productDetail');
+    const notFound = document.getElementById('productNotFound');
+    const product = products.find(p => p.id === productId);
+
+    if (!product || !productDetail) {
+        if (productDetail) productDetail.style.display = 'none';
+        if (notFound) notFound.style.display = 'block';
+    } else {
+        const imageEl = document.getElementById('productImage');
+        const nameEl = document.getElementById('productName');
+        const priceEl = document.getElementById('productPrice');
+        const descriptionEl = document.getElementById('productDescription');
+        const categoryEl = document.getElementById('productCategory');
+        const starsEl = document.getElementById('productStars');
+        const ratingValueEl = document.getElementById('productRatingValue');
+
+        if (imageEl) {
+            imageEl.src = product.image;
+            imageEl.alt = product.name;
+        }
+
+        if (nameEl) nameEl.textContent = product.name;
+        if (priceEl) priceEl.textContent = `$${product.price.toFixed(2)}`;
+        if (descriptionEl) {
+            descriptionEl.textContent = `Premium ${product.category.toLowerCase()} crafted for comfort and style.`;
+        }
+        if (categoryEl) categoryEl.textContent = `Category: ${product.category}`;
+
+        if (starsEl) starsEl.innerHTML = generateStars(product.rating);
+        if (ratingValueEl) ratingValueEl.textContent = `${product.rating}/5`;
+
+        document.title = `${product.name} - BINARY BOUTIQUE`;
+    }
+}

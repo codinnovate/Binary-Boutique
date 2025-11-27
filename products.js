@@ -13,16 +13,18 @@
 
 
     function generateStars(rating) {
-        let stars = '';
-        for (let i = 1; i <= 5; i++) {
-            if (i <= rating) {
-                stars += '★';
-            } else {
-                stars += '☆';
-            }
-        }
-        return stars;
+        const safeRating = Math.min(Math.max(rating, 0), 5);
+        const fullStars = Math.floor(safeRating);
+        const hasHalfStar = safeRating - fullStars >= 0.5;
+        const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+        return [
+            ...Array(fullStars).fill('<span class="star full">★</span>'),
+            hasHalfStar ? '<span class="star half">★</span>' : '',
+            ...Array(emptyStars).fill('<span class="star empty">☆</span>')
+        ].join('');
     }
+
 
 
     function render(productsList) {
