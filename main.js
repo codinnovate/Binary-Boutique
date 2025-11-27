@@ -194,7 +194,7 @@ const trustees = [
     {
         name: 'Progress Ochuko Eyaadah',
         email: 'progress.eyaadah@miva.edu.ng',
-        image: './assets/images/trustee/placeholder.png'
+        image: './assets/images/trustee/Progress ochuko Eyaadah.PNG'
     },
     {
         name: 'Morenike Oyewole',
@@ -240,6 +240,11 @@ const trustees = [
         name: 'Samuel Unachukwu',
         email: 'samuel.unachukwu@miva.edu.ng',
         image: './assets/images/trustee/unachukwu-samuel.jpeg'
+    },
+    {
+        name: 'Joshua Elisah',
+        email: 'joshua.elisah@miva.edu.ng',
+        image: './assets/images/trustee/Joshua-Elisah.jpg'
     }
 ];
 
