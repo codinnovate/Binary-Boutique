@@ -209,7 +209,7 @@ const trustees = [
     {
         name: 'Blessing Nabasu Badari',
         email: 'blessing.badari@miva.edu.ng',
-        image: './assets/images/trustee/placeholder.png'
+        image: './assets/images/trustee/blessing.jpeg'
     },
     {
         name: 'Abdulrahman Usman',
