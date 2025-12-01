@@ -1,5 +1,5 @@
 # Binary Boutique
-
+Website URL: https://binaryboutique.netlify.app
 A modern fashion e-commerce platform curating timeless fashion for the modern individual.
 
 ## About
