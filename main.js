@@ -245,6 +245,11 @@ const trustees = [
         name: 'Joshua Elisah',
         email: 'joshua.elisah@miva.edu.ng',
         image: './assets/images/trustee/Joshua-Elisah.jpg'
+    },
+    {
+        name: 'Mohammed Yahaya',
+        email: 'mohammed.yahaya@miva.edu.ng',
+        image: './assets/images/trustee/mohammed.jpeg'
     }
 ];
 
