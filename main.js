@@ -1,6 +1,19 @@
 const btn = document.querySelector('.menu-btn');
 const nav = document.querySelector('nav');
-btn && nav && (btn.onclick = () => nav.classList.toggle('open'));
+const closeBtn = document.querySelector('.close-btn');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+// Open menu
+btn && nav && (btn.onclick = () => nav.classList.add('open'));
+
+// Close menu
+const closeMenu = () => nav && nav.classList.remove('open');
+closeBtn && (closeBtn.onclick = closeMenu);
+
+// Close menu when clicking nav links
+navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
 
 const products = [
     {
