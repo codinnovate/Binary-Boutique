@@ -8,6 +8,10 @@
   </head>
   <body class="contact">
     <main>
+      <marquee
+        >📍 Visit us: 12 Fashion Ave • For press & collaborations contact our
+        team.</marquee
+      >
       <header>
         <button class="menu-btn">
           <img src="./assets/images/icons/menu.svg" alt="Bars" />
@@ -36,35 +40,128 @@
         </div>
       </header>
 
-      <marquee
-        >📍 Visit us: 12 Fashion Ave • For press & collaborations contact our
-        team.</marquee
-      >
+      <div class="container page">
+        <h2 align="center" style="margin-bottom: 20px">Get in Touch</h2>
+        <p
+          align="center"
+          style="color: #666; max-width: 600px; margin: 0 auto 50px"
+        >
+          Have questions or need assistance? We'd love to hear from you. Reach
+          out through any of these channels.
+        </p>
 
-      <div class="container contact-grid page">
-        <div>
-          <h2>Contact</h2>
-          <p>Email: Hello@binaryboutique.com<br />Phone: +234 8100 100 000</p>
-          <p>Follow us: Instagram / Twitter / Facebook</p>
+        <div class="contact-info-grid">
+          <div class="contact-info-card card">
+            <div class="contact-icon">📧</div>
+            <h3>Email Us</h3>
+            <p>Hello@binaryboutique.com</p>
+          </div>
+
+          <div class="contact-info-card card">
+            <div class="contact-icon">📱</div>
+            <h3>Call Us</h3>
+            <p>+234 8100 100 000</p>
+          </div>
+
+          <div class="contact-info-card card">
+            <div class="contact-icon">📍</div>
+            <h3>Visit Us</h3>
+            <p>12 Fashion Ave, Lagos</p>
+          </div>
+
+          <div class="contact-info-card card">
+            <div class="contact-icon">💬</div>
+            <h3>Social Media</h3>
+            <p>@binaryboutique</p>
+          </div>
         </div>
 
-        <aside class="contact-card">
-          <h3>Quick Message</h3>
-          <form>
-            <input placeholder="Your name" /><br /><br />
-            <input placeholder="Email" /><br /><br />
-            <textarea rows="4" placeholder="Message"></textarea><br /><br />
-            <button type="button" onclick="alert('Send Email!!')">Send</button>
-          </form>
-        </aside>
+        <div class="contact-form-container">
+          <div class="contact-card card">
+            <h3>Send us a Message</h3>
+            <p style="color: #666; margin-bottom: 30px">
+              Fill out the form below and we'll get back to you within 24 hours.
+            </p>
+            <form>
+              <label>Full Name</label>
+              <input type="text" placeholder="Your name" required />
+
+              <label>Email Address</label>
+              <input type="email" placeholder="you@example.com" required />
+
+              <label>Subject</label>
+              <input type="text" placeholder="How can we help?" required />
+
+              <label>Message</label>
+              <textarea
+                rows="5"
+                placeholder="Your message..."
+                required
+              ></textarea>
+
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
       </div>
+
+      <!-- Style Guide Section -->
+      <section class="style-guide-section">
+        <div class="container">
+          <h2 align="center">Our Style Philosophy</h2>
+          <p align="center" style="max-width: 800px; margin: 0 auto 50px">
+            Discover the principles that guide our curation and define the
+            Binary Boutique aesthetic
+          </p>
+
+          <div class="style-guide-grid">
+            <div class="style-guide-card">
+              <div class="style-icon">✨</div>
+              <h3>Timeless Elegance</h3>
+              <p>
+                We believe in pieces that transcend seasonal trends, investing
+                in quality garments that remain stylish year after year.
+              </p>
+            </div>
+
+            <div class="style-guide-card">
+              <div class="style-icon">🎨</div>
+              <h3>Sophisticated Palette</h3>
+              <p>
+                Our collections feature carefully curated color schemes that
+                blend classic neutrals with bold statement hues for versatile
+                styling.
+              </p>
+            </div>
+
+            <div class="style-guide-card">
+              <div class="style-icon">👔</div>
+              <h3>Premium Craftsmanship</h3>
+              <p>
+                Every item is selected for its exceptional quality, superior
+                materials, and attention to detail that you can see and feel.
+              </p>
+            </div>
+
+            <div class="style-guide-card">
+              <div class="style-icon">🌟</div>
+              <h3>Versatile Design</h3>
+              <p>
+                From casual comfort to formal sophistication, our pieces are
+                designed to adapt to your lifestyle and personal expression.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <footer>
         <div>
           <h1>BINARY BOUTIQUE</h1>
           <p>
-            Curating timeless fashion for the modern individual. Discover pieces
-            that celebrate your unique style and confidence.
+            Bringing together classic elegance and modern trends for today's
+            fashion-conscious shopper. Find garments that honor your distinct
+            taste and personality.
           </p>
         </div>
         <div class="footer-links">

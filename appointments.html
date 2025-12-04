@@ -44,36 +44,92 @@
       </header>
 
       <div class="container page">
-        <h2>Inquiries & Appointment</h2>
-        <div class="appointment-card">
-          <form id="appointment-form">
-            <label>Full Name</label><br />
-            <input
-              type="text"
-              name="name"
-              placeholder="Your full name"
-              required
-            /><br /><br />
+        <section class="about-section">
+          <div class="container">
+            <div class="about-content">
+              <h2 align="center">Why Book with Us?</h2>
+              <p>
+                At Binary Boutique, we understand that finding the perfect
+                outfit is more than just shopping—it's an experience. Our
+                personalized appointment services are designed to provide you
+                with expert guidance, exclusive attention, and a curated
+                selection tailored to your unique style and needs.
+              </p>
+              <p>
+                Whether you're preparing for a special event, refreshing your
+                wardrobe, or seeking professional styling advice, our
+                experienced team is here to help you look and feel your absolute
+                best. Book an appointment today and discover the difference
+                personalized service makes.
+              </p>
+              <p
+                align="center"
+                style="color: #666; max-width: 600px; margin: 0 auto 50px"
+              >
+                Schedule a personalized styling consultation or private shopping
+                experience with our fashion experts.
+              </p>
+            </div>
+          </div>
+        </section>
 
-            <label>Email</label><br />
-            <input
-              type="email"
-              name="email"
-              placeholder="you@example.com"
-              required
-            /><br /><br />
+        <div class="appointment-form-container">
+          <div class="appointment-card card">
+            <h3>Appointment Details</h3>
+            <p style="color: #666; margin-bottom: 30px">
+              Please provide your information and preferred time. We'll confirm
+              your appointment within 24 hours.
+            </p>
+            <form id="appointment-form">
+              <label>Full Name</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Your full name"
+                required
+              />
 
-            <label>Message</label><br />
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Tell us about your request..."
-              required
-            ></textarea
-            ><br /><br />
+              <label>Email Address</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              />
 
-            <button type="submit">Send Inquiry</button>
-          </form>
+              <label>Phone Number</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="+234 800 000 0000"
+                required
+              />
+
+              <label>Preferred Date</label>
+              <input type="date" name="date" required />
+
+              <label>Preferred Time</label>
+              <input type="time" name="time" required />
+
+              <label>Service Type</label>
+              <select name="service" required>
+                <option value="">Select a service</option>
+                <option value="styling">Personal Styling Session</option>
+                <option value="shopping">Private Shopping Experience</option>
+                <option value="consultation">Wardrobe Consultation</option>
+                <option value="fitting">Custom Fitting</option>
+              </select>
+
+              <label>Additional Notes</label>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Tell us about your preferences or special requirements..."
+              ></textarea>
+
+              <button type="submit" class="submit-btn">Book Appointment</button>
+            </form>
+          </div>
         </div>
       </div>
 
@@ -81,8 +137,9 @@
         <div>
           <h1>BINARY BOUTIQUE</h1>
           <p>
-            Curating timeless fashion for the modern individual. Discover pieces
-            that celebrate your unique style and confidence.
+            Bringing together classic elegance and modern trends for today's
+            fashion-conscious shopper. Find garments that honor your distinct
+            taste and personality.
           </p>
         </div>
         <div class="footer-links">

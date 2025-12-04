@@ -167,89 +167,106 @@ const products = [
 
 const trustees = [
     {
-        name: 'Alade Ademola Aderohunmu',
-        email: 'alade.aderohunmu@miva.edu.ng',
-        image: './assets/images/trustee/adrohunmu-alade.jpeg'
-    },
-    {
-        name: 'Opeyemi Ibrahim Okekunle',
-        email: 'opeyemi.ibrahim@miva.edu.ng',
-        image: './assets/images/trustee/opeyemi-ibrahim.jpeg'
-    },
-    {
-        name: 'Samad Sapara',
-        email: 'samad.sapara@miva.edu.ng',
-        image: './assets/images/trustee/placeholder.png'
-    },
-    {
-        name: 'Aiyenimelo Tofunmi',
-        email: 'aiyenimelo.tofunmi@miva.edu.ng',
-        image: './assets/images/trustee/placeholder.png'
-    },
-    {
-        name: 'Jonah Elisha',
-        email: 'jonah.elisha@miva.edu.ng',
-        image: './assets/images/trustee/placeholder.png'
-    },
-    {
-        name: 'Progress Ochuko Eyaadah',
-        email: 'progress.eyaadah@miva.edu.ng',
-        image: './assets/images/trustee/Progress ochuko Eyaadah.PNG'
-    },
-    {
         name: 'Morenike Oyewole',
+        role: 'Project Manager',
         email: 'morenike.oyewole@miva.edu.ng',
         image: './assets/images/trustee/Morenike-Oyewole.jpg'
     },
     {
         name: 'Samuel Adeyemi',
+        role: 'Design Lead',
         email: 'samuel.adeyemi@miva.edu.ng',
         image: './assets/images/trustee/13.png'
     },
     {
+        name: 'Alade Ademola Aderohunmu',
+        role: 'Developer',
+        email: 'alade.aderohunmu@miva.edu.ng',
+        image: './assets/images/trustee/adrohunmu-alade.jpeg'
+    },
+    {
+        name: 'Opeyemi Ibrahim Okekunle',
+        role: 'Developer',
+        email: 'opeyemi.ibrahim@miva.edu.ng',
+        image: './assets/images/trustee/opeyemi-ibrahim.jpeg'
+    },
+    {
+        name: 'Progress Ochuko Eyaadah',
+        role: 'Developer',
+        email: 'progress.eyaadah@miva.edu.ng',
+        image: './assets/images/trustee/Progress ochuko Eyaadah.PNG'
+    },
+    {
         name: 'Blessing Nabasu Badari',
+        role: 'QA Engineer',
         email: 'blessing.badari@miva.edu.ng',
         image: './assets/images/trustee/blessing.jpeg'
     },
     {
         name: 'Abdulrahman Usman',
+        role: 'Developer',
         email: 'usman.abdulrahman@miva.edu.ng',
         image: './assets/images/trustee/Abdulrahman-Usman .jpeg'
     },
     {
-        name: 'Oluwaseun Donna',
-        email: 'oluwaseun.donna@miva.edu.ng',
-        image: './assets/images/trustee/placeholder.png'
-    },
-    {
         name: 'Ajala Abdullah',
+        role: 'Developer',
         email: 'ajala.abdullah@miva.edu.ng',
         image: './assets/images/trustee/14.png'
     },
     {
         name: 'Boluwatife Ajayi',
+        role: 'Developer',
         email: 'boluwatife.ajayi@miva.edu.ng',
         image: './assets/images/trustee/Ajayi-Boluwatife.jpeg'
     },
     {
         name: 'Micheal Princewill',
+        role: 'Developer',
         email: 'micheal.princewill@miva.edu.ng',
         image: './assets/images/trustee/Michael_Princewill.jpeg'
     },
     {
         name: 'Samuel Unachukwu',
+        role: 'Content Writer',
         email: 'samuel.unachukwu@miva.edu.ng',
         image: './assets/images/trustee/unachukwu-samuel.jpeg'
     },
     {
         name: 'Joshua Elisah',
+        role: 'Developer',
         email: 'joshua.elisah@miva.edu.ng',
         image: './assets/images/trustee/Joshua-Elisah.jpg'
     },
     {
         name: 'Mohammed Yahaya',
+        role: 'Developer',
         email: 'mohammed.yahaya@miva.edu.ng',
         image: './assets/images/trustee/mohammed.jpeg'
+    },
+    {
+        name: 'Samad Sapara',
+        role: 'Developer',
+        email: 'samad.sapara@miva.edu.ng',
+        image: './assets/images/trustee/placeholder.png'
+    },
+    {
+        name: 'Aiyenimelo Tofunmi',
+        role: 'Developer',
+        email: 'aiyenimelo.tofunmi@miva.edu.ng',
+        image: './assets/images/trustee/placeholder.png'
+    },
+    {
+        name: 'Jonah Elisha',
+        role: 'Developer',
+        email: 'jonah.elisha@miva.edu.ng',
+        image: './assets/images/trustee/placeholder.png'
+    },
+    {
+        name: 'Oluwaseun Donna',
+        role: 'Developer',
+        email: 'oluwaseun.donna@miva.edu.ng',
+        image: './assets/images/trustee/placeholder.png'
     }
 ];
 
@@ -305,16 +322,20 @@ const boardList = document.getElementById('board-list');
 if (boardList) {
     boardList.innerHTML = trustees.map(trustee => `
         <div class="board-card">
-          <img
-            src="${trustee.image}"
-            alt="${trustee.name}"
-            width="205"
-            height="208"
-          />
-          <h3>${trustee.name}</h3>
-          <p>
-            <a href="mailto:${trustee.email}">${trustee.email}</a>
-          </p>
+          <div class="board-card-image">
+            <img
+              src="${trustee.image}"
+              alt="${trustee.name}"
+              onerror="this.src='./assets/images/trustee/placeholder.png'"
+            />
+          </div>
+          <div class="board-card-content">
+            <h3>${trustee.name}</h3>
+            <p class="board-role">${trustee.role}</p>
+            <p class="board-email">
+              <a href="mailto:${trustee.email}">${trustee.email}</a>
+            </p>
+          </div>
         </div>
       `).join('');
 }
